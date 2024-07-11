@@ -59,7 +59,6 @@ namespace BoletoBusPro.Module.Persistence.Repositories
             existingBus.Nombre = entity.Nombre;
             existingBus.CapacidadPiso1 = entity.CapacidadPiso1;
             existingBus.CapacidadPiso2 = entity.CapacidadPiso2;
-            existingBus.CapacidadTotal = entity.CapacidadTotal;
             existingBus.Disponible = entity.Disponible;
             existingBus.FechaCreacion = entity.FechaCreacion;
 

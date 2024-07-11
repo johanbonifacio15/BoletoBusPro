@@ -3,7 +3,7 @@ using BoletoBusPro.Module.Domain.Entities;
 
 namespace BoletoBusPro.Module.Domain.Interfaces
 {
-    public interface IAsientoRepository : IBaseRepository<Module.Domain.Entities.Asiento, int>
+    public interface IAsientoRepository : IBaseRepository<Asiento, int>
     {
         List<Asiento> GetAsientosByBusId(int IdBus);
     }

@@ -15,7 +15,6 @@ namespace BoletoBusPro.Module.Persistence.Models.BusModels
             bus.Nombre = Nombre;
             bus.CapacidadPiso1 = CapacidadPiso1;
             bus.CapacidadPiso2 = CapacidadPiso2;
-            bus.CapacidadTotal = CapacidadTotal;
             bus.Disponible = Disponible;
             bus.FechaCreacion = FechaCreacion;
         }

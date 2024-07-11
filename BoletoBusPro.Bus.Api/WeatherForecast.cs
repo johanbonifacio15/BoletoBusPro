@@ -1,4 +1,4 @@
-namespace BoletoBusPro.Bus.Api
+namespace BoletoBusPro.Module.Api
 {
     public class WeatherForecast
     {

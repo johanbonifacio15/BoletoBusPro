@@ -3,8 +3,8 @@ using BoletoBusPro.Module.Domain.Entities;
 
 namespace BoletoBusPro.Module.Domain.Interfaces
 {
-    public interface IBusRepository : IBaseRepository<Module.Domain.Entities.Bus, int>
+    public interface IBusRepository : IBaseRepository<Bus, int>
     {
-        List<Module.Domain.Entities.Bus> GetBusesById(int IdBus);
+        List<Bus> GetBusesById(int IdBus);
     }
 }
