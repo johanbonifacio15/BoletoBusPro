@@ -4,7 +4,8 @@
         int IdAsiento,
         int IdBus,
         int NumeroPiso,
-        int NumeroAsiento
+        int NumeroAsiento,
+        DateTime FechaCreacion
     );
 }
 

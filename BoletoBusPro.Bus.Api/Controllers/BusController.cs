@@ -50,9 +50,9 @@ namespace BoletoBusPro.Module.Api.Controllers
             return CreatedAtAction(nameof(Get), new { id = result.Data.Id }, result.Data);
         }
 
-        // PUT: api/Bus/5
+        // POST: api/Bus/UpdateBuses
         [HttpPost("UpdateBuses")]
-        public IActionResult Put(int id, [FromBody] BusDtoUpdate dtoUpdate)
+        public IActionResult Post([FromBody] BusDtoUpdate dtoUpdate)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -63,6 +63,7 @@ namespace BoletoBusPro.Module.Api.Controllers
 
             return NoContent();
         }
+
 
         // DELETE: api/Bus
         [HttpDelete("RemoveBuses")]

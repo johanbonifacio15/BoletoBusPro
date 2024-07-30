@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BoletoBusPro.Web.Models.Asiento.AsientoGetModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Asientos</h1>
+
+<p>
+    <a asp-action="Create">Crear Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.IdAsiento)</th>
+            <th>@Html.DisplayNameFor(model => model.IdBus)</th>
+            <th>@Html.DisplayNameFor(model => model.NumeroPiso)</th>
+            <th>@Html.DisplayNameFor(model => model.NumeroAsiento)</th>
+            <th>@Html.DisplayNameFor(model => model.FechaCreacion)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.IdAsiento)</td>
+            <td>@Html.DisplayFor(modelItem => item.IdBus)</td>
+            <td>@Html.DisplayFor(modelItem => item.NumeroPiso)</td>
+            <td>@Html.DisplayFor(modelItem => item.NumeroAsiento)</td>
+            <td>@Html.DisplayFor(modelItem => item.FechaCreacion)</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdAsiento }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.IdAsiento })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

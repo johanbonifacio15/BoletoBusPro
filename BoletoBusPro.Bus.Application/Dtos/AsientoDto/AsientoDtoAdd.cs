@@ -3,7 +3,8 @@
     public record AsientoDtoAdd(
         int IdBus,
         int NumeroPiso,
-        int NumeroAsiento
+        int NumeroAsiento,
+        DateTime FechaCreacion
     );
 }
 

@@ -1,0 +1,47 @@
+﻿@model BoletoBusPro.Web.Models.Asiento.AsientoSaveModel
+
+@{
+    ViewData["Title"] = "Crear Asiento";
+}
+
+<h1>Crear Asiento</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdBus" class="control-label"></label>
+                <input asp-for="IdBus" class="form-control" />
+                <span asp-validation-for="IdBus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroPiso" class="control-label"></label>
+                <input asp-for="NumeroPiso" class="form-control" />
+                <span asp-validation-for="NumeroPiso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroAsiento" class="control-label"></label>
+                <input asp-for="NumeroAsiento" class="form-control" />
+                <span asp-validation-for="NumeroAsiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaCreacion" class="control-label"></label>
+                <input asp-for="FechaCreacion" class="form-control" />
+                <span asp-validation-for="FechaCreacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

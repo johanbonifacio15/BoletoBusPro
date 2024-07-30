@@ -52,7 +52,7 @@ namespace BoletoBusPro.Module.Api.Controllers
         }
 
         [HttpPost("UpdateAsiento")]
-        public IActionResult Put([FromBody] AsientoDtoUpdate dtoUpdate)
+        public IActionResult Post([FromBody] AsientoDtoUpdate dtoUpdate)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

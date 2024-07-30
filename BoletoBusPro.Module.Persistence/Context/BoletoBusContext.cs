@@ -8,10 +8,10 @@ namespace BoletoBusPro.Module.Persistence.Context
         public BoletoBusContext(DbContextOptions<BoletoBusContext> options) : base(options)
         {
         }
-
+        #region "Db Sets"
         public DbSet<Bus> Buses { get; set; }
         public DbSet<Asiento> Asientos { get; set; }
-
+        #endregion
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

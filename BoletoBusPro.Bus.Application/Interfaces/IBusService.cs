@@ -4,7 +4,7 @@ using BoletoBusPro.Module.Persistence.Models.BusModels;
 
 namespace BoletoBusPro.Module.Application.Interfaces
 {
-    public interface IBusService
+    public interface IBusService 
     {
         ServiceResult GetBuses();
         ServiceResult GetBus(int id);

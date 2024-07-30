@@ -58,7 +58,8 @@ namespace BoletoBusPro.Module.Application.Services
                         asiento.Id,
                         asiento.IdBus,
                         asiento.NumeroPiso,
-                        asiento.NumeroAsiento
+                        asiento.NumeroAsiento,
+                        asiento.FechaCreacion
                     )).ToList()
                 };
                 return result;
@@ -83,7 +84,8 @@ namespace BoletoBusPro.Module.Application.Services
                         asiento.Id,
                         asiento.IdBus,
                         asiento.NumeroPiso,
-                        asiento.NumeroAsiento
+                        asiento.NumeroAsiento,
+                        asiento.FechaCreacion
                     )
                 };
                 return result;
@@ -102,7 +104,7 @@ namespace BoletoBusPro.Module.Application.Services
                 validationResult = Validate(() => asientoUpdate.NumeroAsiento <= 0, "El número de asiento es requerido.");
                 if (!validationResult.Success) return validationResult;
 
-                var asiento = asientoRepository.GetEntityBy(asientoUpdate.IdAsiento); // Obtén la entidad existente
+                var asiento = asientoRepository.GetEntityBy(asientoUpdate.IdAsiento); 
                 if (asiento == null)
                 {
                     return new ServiceResult
@@ -111,7 +113,7 @@ namespace BoletoBusPro.Module.Application.Services
                         Message = "Asiento no encontrado."
                     };
                 }
-                asientoUpdate.UpdateEntity(asiento); // Actualiza la entidad con los nuevos datos
+                asientoUpdate.UpdateEntity(asiento); 
 
                 asientoRepository.Update(asiento);
                 return new ServiceResult { Success = true };
@@ -124,7 +126,7 @@ namespace BoletoBusPro.Module.Application.Services
                 var validationResult = Validate(() => asientoRemove == null, "Los datos del asiento no pueden ser nulos.");
                 if (!validationResult.Success) return validationResult;
 
-                var asiento = asientoRepository.GetEntityBy(asientoRemove.IdAsiento); // Obtén la entidad existente
+                var asiento = asientoRepository.GetEntityBy(asientoRemove.IdAsiento); 
                 if (asiento == null)
                 {
                     return new ServiceResult
@@ -155,7 +157,7 @@ namespace BoletoBusPro.Module.Application.Services
                     IdBus = asientoAdd.IdBus,
                     NumeroPiso = asientoAdd.NumeroPiso,
                     NumeroAsiento = asientoAdd.NumeroAsiento,
-                    FechaCreacion = DateTime.Now // Configurando fecha de creación
+                    FechaCreacion = DateTime.Now 
                 };
 
                 asientoRepository.Save(asientoEntity);
